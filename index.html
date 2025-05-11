@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./asset/car1.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Typing Ninja</title>
+    <style>
+      .racing-sans-font {
+        font-family: "Racing Sans One", sans-serif;
+      }
+      .shadow{
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(226, 214, 45), 0 0 40px rgb(226, 214, 45), 0 0 50px #fffb00, 0 0 60px #fffb00, 0 0 70px rgb(226, 214, 45);
+      }
+    </style>
+  </head>
+  <body class="racing-sans-font w-11/12 mx-auto bg-[#1a1a1a] text-white h-auto text-center flex flex-col justify-center">
+    <div class="space-y-9 my-12">
+      <h1 class="text-7xl">Typing Ninja</h1>
+      <button id="start" class="btn btn-warning text-black shadow lg:px-12 lg:py-8 text-3xl">
+        Start Game
+      </button>
+    </div>
+
+    <div class="container h-[360px] lg:h-[500px] w-full mx-auto">
+        <div class="track bg-[url(./asset/race_track.jpg)] bg-contain bg-no-repeat bg-center w-[100%] h-[100%] relative overflow-hidden">
+            <div id="car-1" class="w-40 absolute transition-[left] duration-[900ms] ease-in-out lg:top-[30%] left-[-5%]">
+                <img class="h-[60px] w-auto" src="./asset/car1.png" alt="car1">
+            </div>
+            <div id="car-2" class="w-40 absolute transition-[left] duration-[900ms] ease-in-out lg:bottom-[30%] left-[-5%] ">
+                <img class="h-[60px] w-auto" src="./asset/car2.png" alt="car2">
+            </div>
+        </div>
+    </div>
+
+    <div id="type-container" class="bg-[#444] lg:m-12 lg:p-20 rounded-xl">
+        <div id="word-to-type" class="text-6xl mb-10"></div>
+        <input class="w-[25%] pl-4 py-2 rounded-xl border-2 border-yellow-500 lg:text-3xl" type="text" id="typed-word" placeholder="Type here...">
+    </div>
+
+    <dialog id="modal" class="w-[500px] h-[270px] text-6xl bg-[#333232] text-white border-2 border-yellow-500 rounded-xl top-[50%] left-[38%]"></dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
